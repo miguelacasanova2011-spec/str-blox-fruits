@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>STR Blox Fruits</title>
+
+<style>
+
+.card img{
+    width:100%;
+    height:160px;        /* TODAS mismo alto */
+    object-fit:contain;  /* No se deforman */
+    background:#fff;     /* Fondo blanco limpio */
+    border-radius:8px;
+}
+
+.card{
+    min-height:280px;    /* Todas mismas cards */
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    color:#000;
+}
+
+header{
+    text-align:center;
+    padding:30px 15px;
+}
+
+.logo{
+    width:180px;
+    opacity:0.95;
+}
+
+h1{
+    margin-top:10px;
+}
+
+.menu{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.menu button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    background:#9f6bff;
+    color:#000;
+}
+
+.section{
+    display:none;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.section h2{
+    margin-bottom:15px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:15px;
+}
+
+.card{
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:12px;
+    background:#fafafa;
+}
+
+.card h3{
+    margin:0 0 5px;
+}
+
+.price{
+    font-size:14px;
+}
+
+.buy{
+    margin-top:8px;
+    width:100%;
+    padding:8px;
+    border:none;
+    border-radius:8px;
+    background:#25D366;
+    cursor:pointer;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="img/logo.png" class="logo">
+    <h1>Bienvenido a STR Blox Fruits</h1>
+</header>
+
+<div class="menu">
+    <button onclick="show('fisicas')">Frutas Físicas</button>
+    <button onclick="show('permanentes')">Frutas Permanentes</button>
+    <button onclick="show('skins')">Skins</button>
+    <button onclick="show('gamepass')">Gamepass</button>
+    <button disabled>Cuentas (Próximamente)</button>
+</div>
+
+<!-- ================= FISICAS ================= -->
+<div class="section" id="fisicas">
+<h2>🍏 Frutas Físicas</h2>
+<div class="grid">
+
+<div class="card"><img src="img/dragon.png"><h3>Dragon</h3><div class="price">95.000 COP</div><button class="buy" onclick="comprar('Dragon Física','95.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/control.png"><h3>Control</h3><div class="price">18.000 COP</div><button class="buy" onclick="comprar('Control Física','18.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/kitsune.png"><h3>Kitsune</h3><div class="price">24.000 COP</div><button class="buy" onclick="comprar('Kitsune Física','24.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/yeti.png"><h3>Yeti</h3><div class="price">17.000 COP</div><button class="buy" onclick="comprar('Yeti Física','17.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/tiger.png"><h3>Tiger</h3><div class="price">18.000 COP</div><button class="buy" onclick="comprar('Tiger Física','18.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spirit.png"><h3>Spirit</h3><div class="price">6.000 COP</div><button class="buy" onclick="comprar('Spirit Física','6.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/gas.png"><h3>Gas</h3><div class="price">14.000 COP</div><button class="buy" onclick="comprar('Gas Física','14.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/venom.png"><h3>Venom</h3><div class="price">No disponible</div></div>
+<div class="card"><img src="img/shadow.png"><h3>Shadow</h3><div class="price">5.000 COP</div><button class="buy" onclick="comprar('Shadow Física','5.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/dough.png"><h3>Dough</h3><div class="price">10.000 COP</div><button class="buy" onclick="comprar('Dough Física','10.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/trex.png"><h3>T-Rex</h3><div class="price">8.000 COP</div><button class="buy" onclick="comprar('T-Rex Física','8.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/mammoth.png"><h3>Mammoth</h3><div class="price">6.000 COP</div><button class="buy" onclick="comprar('Mammoth Física','6.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/gravity.png"><h3>Gravity</h3><div class="price">7.000 COP</div><button class="buy" onclick="comprar('Gravity Física','7.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/blizzard.png"><h3>Blizzard</h3><div class="price">7.000 COP</div><button class="buy" onclick="comprar('Blizzard Física','7.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/pain.png"><h3>Pain</h3><div class="price">6.000 COP</div><button class="buy" onclick="comprar('Pain Física','6.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/light.png"><h3>Lightning</h3><div class="price">14.000 COP</div><button class="buy" onclick="comprar('Lightning Física','14.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/portal.png"><h3>Portal</h3><div class="price">6.000 COP</div><button class="buy" onclick="comprar('Portal Física','6.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/phoenix.png"><h3>Phoenix</h3><div class="price">4.000 COP</div><button class="buy" onclick="comprar('Phoenix Física','4.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/sound.png"><h3>Sound</h3><div class="price">4.000 COP</div><button class="buy" onclick="comprar('Sound Física','4.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spider.png"><h3>Spider</h3><div class="price">3.000 COP</div><button class="buy" onclick="comprar('Spider Física','3.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/creation.png"><h3>Creation</h3><div class="price">3.000 COP</div><button class="buy" onclick="comprar('Creation Física','3.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/love.png"><h3>Love</h3><div class="price">3.000 COP</div><button class="buy" onclick="comprar('Love Física','3.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/buddha.png"><h3>Buddha</h3><div class="price">6.000 COP</div><button class="buy" onclick="comprar('Buddha Física','6.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/quake.png"><h3>Quake</h3><div class="price">3.000 COP</div><button class="buy" onclick="comprar('Quake Física','3.000 COP')">Comprar</button></div>
+
+</div>
+</div>
+
+<!-- ================= PERMANENTES ================= -->
+<div class="section" id="permanentes">
+<h2>💎 Frutas Permanentes</h2>
+<div class="grid">
+
+<div class="card"><img src="img/dragon.png"><h3>Dragon</h3><div class="price">130.000 COP</div><button class="buy" onclick="comprar('Dragon Permanente','130.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/control.png"><h3>Control</h3><div class="price">115.000 COP</div><button class="buy" onclick="comprar('Control Permanente','115.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/kitsune.png"><h3>Kitsune</h3><div class="price">115.000 COP</div><button class="buy" onclick="comprar('Kitsune Permanente','115.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/yeti.png"><h3>Yeti</h3><div class="price">80.000 COP</div><button class="buy" onclick="comprar('Yeti Permanente','80.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/tiger.png"><h3>Tiger</h3><div class="price">80.000 COP</div><button class="buy" onclick="comprar('Tiger Permanente','80.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spirit.png"><h3>Spirit</h3><div class="price">70.000 COP</div><button class="buy" onclick="comprar('Spirit Permanente','70.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/gas.png"><h3>Gas</h3><div class="price">70.000 COP</div><button class="buy" onclick="comprar('Gas Permanente','70.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/venom.png"><h3>Venom</h3><div class="price">70.000 COP</div><button class="buy" onclick="comprar('Venom Permanente','70.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/shadow.png"><h3>shadow</h3><div class="price">70.000 COP</div><button class="buy" onclick="comprar('shadow Permanente','70.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/dough.png"><h3>Dough</h3><div class="price">66.000 COP</div><button class="buy" onclick="comprar('Dough Permanente','66.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/trex.png"><h3>T-Rex</h3><div class="price">66.000 COP</div><button class="buy" onclick="comprar('T-Rex Permanente','66.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/mammoth.png"><h3>Mammoth</h3><div class="price">64.000 COP</div><button class="buy" onclick="comprar('Mammoth Permanente','64.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/gravity.png"><h3>Gravity</h3><div class="price">64.000 COP</div><button class="buy" onclick="comprar('Gravity Permanente','64.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/blizzard.png"><h3>Blizzard</h3><div class="price">62.000 COP</div><button class="buy" onclick="comprar('Blizzard Permanente','62.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/pain.png"><h3>Pain</h3><div class="price">62.000 COP</div><button class="buy" onclick="comprar('Pain Permanente','62.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/lightning.png"><h3>lightning</h3><div class="price">60.000 COP</div><button class="buy" onclick="comprar('lightning Permanente','60.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/portal.png"><h3>portal</h3><div class="price">57.000 COP</div><button class="buy" onclick="comprar('Portal Permanente','57.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/phoenix.png"><h3>phoenix</h3><div class="price">57.000 COP</div><button class="buy" onclick="comprar('phoenix Permanente','57.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/sound.png"><h3>Sound</h3><div class="price">55.000 COP</div><button class="buy" onclick="comprar('sound Permanente','55.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spider.png"><h3>spider</h3><div class="price">53.000 COP</div><button class="buy" onclick="comprar('spider Permanente','53.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/creation.png"><h3>creation</h3><div class="price">50.000 COP</div><button class="buy" onclick="comprar('creation Permanente','50.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/love.png"><h3>Love</h3><div class="price">49.000 COP</div><button class="buy" onclick="comprar('love Permanente','49.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/buddha.png"><h3>buddha</h3><div class="price">49.000 COP</div><button class="buy" onclick="comprar('buddha Permanente','49.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/quake.png"><h3>quake</h3><div class="price">45.000 COP</div><button class="buy" onclick="comprar('quake Permanente','45.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/magma.png"><h3>magma</h3><div class="price">42.000 COP</div><button class="buy" onclick="comprar('magma Permanente','42.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/ghost.png"><h3>ghost</h3><div class="price">41.000 COP</div><button class="buy" onclick="comprar('ghost Permanente','41.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/rubber.png"><h3>rubber</h3><div class="price">40.000 COP</div><button class="buy" onclick="comprar('rubber Permanente','40.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/light.png"><h3>light</h3><div class="price">37.000 COP</div><button class="buy" onclick="comprar('light Permanente','37.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/diamond.png"><h3>diamond</h3><div class="price">35.000 COP</div><button class="buy" onclick="comprar('diamond Permanente','35.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/eagle.png"><h3>eagle</h3><div class="price">35.000 COP</div><button class="buy" onclick="comprar('eagle Permanente','35.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/dark.png"><h3>dark</h3><div class="price">35.000 COP</div><button class="buy" onclick="comprar('Dark Permanente','35.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/sand.png"><h3>sand</h3><div class="price">32.000 COP</div><button class="buy" onclick="comprar('sand Permanente','32.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/flame.png"><h3>flame</h3><div class="price">25.000 COP</div><button class="buy" onclick="comprar('flame Permanente','25.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spike.png"><h3>spike</h3><div class="price">22.000 COP</div><button class="buy" onclick="comprar('spike Permanente','22.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/smoke.png"><h3>smoke</h3><div class="price">20.000 COP</div><button class="buy" onclick="comprar('smoke Permanente','20.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/bomb.png"><h3>bomb</h3><div class="price">18.000 COP</div><button class="buy" onclick="comprar('bomb Permanente','18.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spring.png"><h3>spring</h3><div class="price">16.000 COP</div><button class="buy" onclick="comprar('spring Permanente','16.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/blade.png"><h3>blade</h3><div class="price">14.000 COP</div><button class="buy" onclick="comprar('blade Permanente','14.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/spin.png"><h3>spin</h3><div class="price">12.000 COP</div><button class="buy" onclick="comprar('spin Permanente','12.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/rocket.png"><h3>rocket</h3><div class="price">7.000 COP</div><button class="buy" onclick="comprar('spin Permanente','7.000 COP')">Comprar</button></div>
+
+
+</div>
+</div>
+
+<!-- ================= SKINS ================= -->
+<div class="section" id="skins">
+<h2>🎨 Skins</h2>
+<div class="grid">
+
+<div class="card"><img src="img/galaxy_kitsune.png"><h3>Galaxy Kitsune</h3><div class="price">180.000 COP</div><button class="buy" onclick="comprar('Galaxy Kitsune','180.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/ember_dragon.png"><h3>Ember Dragon</h3><div class="price">160.000 COP</div><button class="buy" onclick="comprar('Ember Dragon','160.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/crimson_kitsune.png"><h3>Crimson Kitsune</h3><div class="price">140.000 COP</div><button class="buy" onclick="comprar('Crimson Kitsune','140.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/purple_lightning.png"><h3>Purple Lightning</h3><div class="price">85.000 COP</div><button class="buy" onclick="comprar('Purple Lightning','85.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/yellow_lightning.png"><h3>Yellow Lightning</h3><div class="price">45.000 COP</div><button class="buy" onclick="comprar('Yellow Lightning','45.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/red_lightning.png"><h3>Red Lightning</h3><div class="price">40.000 COP</div><button class="buy" onclick="comprar('Red Lightning','40.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/divine_portal.png"><h3>Divine Portal</h3><div class="price">35.000 COP</div><button class="buy" onclick="comprar('Divine Portal','35.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/werewolf.png"><h3>werewolf</h3><div class="price">30.000 COP</div><button class="buy" onclick="comprar('werewolf','30.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/celestial_pain.png"><h3>celestial pain</h3><div class="price">28.000 COP</div><button class="buy" onclick="comprar('celestial pain','28.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/sadness_pain.png"><h3>sadness pain</h3><div class="price">28.000 COP</div><button class="buy" onclick="comprar('sadness pain','28.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/frustration_pain.png"><h3>frustration pain</h3><div class="price">25.000 COP</div><button class="buy" onclick="comprar('frustration pain','25.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/green_lightning.png"><h3>green lightning</h3><div class="price">15.000 COP</div><button class="buy" onclick="comprar('green lightning','15.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/torment_pain.png"><h3>torment pain</h3><div class="price">12.000 COP</div><button class="buy" onclick="comprar('torment pain','12.000 COP')">Comprar</button></div>
+
+
+</div>
+</div>
+
+<!-- ================= GAMEPASS ================= -->
+<div class="section" id="gamepass">
+<h2>🎮 Gamepass</h2>
+<div class="grid">
+
+<div class="card"><img src="img/2xmoney.png"><h3>x2 Money</h3><div class="price">16.000 COP</div><button class="buy" onclick="comprar('x2 Money','16.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/2xmastery.png"><h3>x2 Mastery</h3><div class="price">16.000 COP</div><button class="buy" onclick="comprar('x2 Mastery','16.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/fruitstorage.png"><h3>Fruit Storage</h3><div class="price">15.000 COP</div><button class="buy" onclick="comprar('Fruit Storage','15.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/2xdrops.png"><h3>x2 Drops</h3><div class="price">13.000 COP</div><button class="buy" onclick="comprar('x2 Drops','13.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/fastboats.png"><h3>Fast Boats</h3><div class="price">13.000 COP</div><button class="buy" onclick="comprar('Fast Boats','13.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/darkblade.png"><h3>Dark Blade</h3><div class="price">36.000 COP</div><button class="buy" onclick="comprar('Dark Blade','36.000 COP')">Comprar</button></div>
+<div class="card"><img src="img/fruitnotifier.png"><h3>Fruit Notifier</h3><div class="price">76.000 COP</div><button class="buy" onclick="comprar('Fruit Notifier','76.000 COP')">Comprar</button></div>
+
+</div>
+</div>
+
+<script>
+function show(id){
+    document.querySelectorAll('.section').forEach(s=>s.style.display='none');
+    document.getElementById(id).style.display='block';
+}
+
+function comprar(producto,precio){
+    localStorage.setItem("producto",producto);
+    localStorage.setItem("precio",precio);
+    window.location.href="confirmar.html";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+<script>
+function comprar(producto, precio){
+    const url = `confirmar.html?producto=${encodeURIComponent(producto)}&precio=${encodeURIComponent(precio)}`;
+    window.location.href = url;
+}
+</script>
